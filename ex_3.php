@@ -1,8 +1,10 @@
 <?php
 function mascararCpf($string) {
-    return str_repeat('*', strlen($string));
+    return str_repeat('*', strlen($string) - 4) . substr($string, -4);
 }
 
 
-$senha = "minhasenha123";
-echo mascararCpf($senha);
+$cpf = "498487949";
+echo mascararCpf($cpf);
+
+?>
